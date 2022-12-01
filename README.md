@@ -5,3 +5,5 @@
 ## 2. Programar las clases necesarias.
 ## 3. La app debe permitir crear objetos de las distintas clases; inicializando las cuentas con unos valores iniciales. Ademas, debe permitir consignar y retirar fondos de cada una de las cuentas, actualizando saldos y los respectivos intereses. 
 
+![class-diagram](https://user-images.githubusercontent.com/102545608/205069450-9bdedb08-4f70-45b9-87cf-b58bc79ec5a0.jpeg)
+![image](https://user-images.githubusercontent.com/102545608/205069701-e061f134-ffd2-4729-b150-ab21226aef0f.png)
