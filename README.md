@@ -4,3 +4,5 @@
 ## 1. Contruir el diagrama de clases requerido.
 ## 2. Programar las clases necesarias.
 ## 3. La app debe permitir crear objetos de las distintas clases; inicializando las cuentas con unos valores iniciales. Ademas, debe permitir consignar y retirar fondos de cada una de las cuentas, actualizando saldos y los respectivos intereses. 
+
+# ![class-diagram](https://user-images.githubusercontent.com/102545608/205049300-7d5146c5-ca93-471d-a393-caaccab1f2d3.jpeg)
