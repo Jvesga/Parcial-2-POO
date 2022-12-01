@@ -1,52 +1,25 @@
 package modelo;
 
-import java.util.ArrayList;
+public class Cuenta {
+    
+    private int numeroCuenta;
+    private double saldo;
+    
+    public Cuenta(int cuenta, double inicial) {
+        numeroCuenta = cuenta;
+        saldo = inicial;
+    } 
 
-public class Equipo
-{
-    //----------------------zz
-    // Constantes
-    //----------------------
-    public final static int NUMERO_EMPLEADOS = 3;
+    public void depositar(double cantidad) {
+        saldo = saldo + cantidad;
+    } 
 
-    //----------------------
-    // Atributos
-    //----------------------
+    public void retirar(double cantidad) {
+        saldo = saldo - cantidad;
+    } 
 
-    //private Empleado[] empleados;
-    private ArrayList jugadores;
-
-    //----------------------
-    // Metodos
-    //----------------------
-    public Equipo()
-    {
-        //empleados = new Empleado[NUMERO_EMPLEADOS];
-        jugadores = new ArrayList();
-    }
-
-    public void agregarJugador(Jugador emp)
-    {
-        jugadores.add(emp);
-    }
-
-    public double calcularNomina()
-    {
-        double totalnomina = 0;
-        for(int i=0; i<jugadores.size();i++)
-        {
-            Jugador temp = (Jugador) jugadores.get(i);
-        }
-        return totalnomina;
-    }
-
-    public Jugador getJugador(int i)
-    {
-        return (Jugador) jugadores.get(i);
-    }
-
-    public int getNumeroJugadores()
-    {
-        return jugadores.size();
-    }
+    public double saldo() {
+        return saldo;
+    }     
+    
 }
