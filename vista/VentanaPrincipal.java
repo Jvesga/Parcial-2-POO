@@ -38,7 +38,7 @@ public class VentanaPrincipal extends JFrame
         this.add(miPanelResultado);
         
         // Caracteristicas de la ventana
-        this.setTitle("CasoBiblioteca");
+        this.setTitle("Banco DAVIPOO");
         this.setSize(558,532);
         //this.setLocation(100,100);
         this.setLocationRelativeTo(null);;
