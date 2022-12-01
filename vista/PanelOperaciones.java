@@ -1,6 +1,8 @@
 package vista;
 
 import java.awt.Color;
+import java.awt.Font;
+import static java.awt.Font.BOLD;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -8,42 +10,50 @@ import javax.swing.border.TitledBorder;
 
 public class PanelOperaciones extends JPanel
 {
- 
-    public JButton btHallar;
+        //----------------------
+    //Atributos
+    //----------------------
+    public JButton btAgregarSaldo;
+    public JButton btRetirarSaldo;
     public JButton btBorrar;
     public JButton btSalir;
 
-   
-
-   
+    //----------------------
+    //Metodos
+    //----------------------
+    
+    //Constructor
     public PanelOperaciones()
     {
+        //Definicion del contendor del panel
+        setLayout(null);
+        setBackground(Color.RED);
         
-        this.setLayout(null);
-        this.setBackground(Color.WHITE);
+        //Creación y adicion de los botones
+        btAgregarSaldo = new JButton("Retirar");
+        btAgregarSaldo.setBounds(5,22,100,40);
+        btAgregarSaldo.setActionCommand("Retirar");
+        this.add(btAgregarSaldo);
 
-        
-        btHallar = new JButton("Consignar");
-        btHallar.setBounds(30,40,100,40);
-        this.add(btHallar);
-        btHallar.setActionCommand("Consignar");
+        btRetirarSaldo = new JButton("Consignar");
+        btRetirarSaldo.setBounds(110,22,100,40);
+        btRetirarSaldo.setActionCommand("Consignar");
+        this.add(btRetirarSaldo);
 
-        // crear y agregar boton borrar
         btBorrar = new JButton("Borrar");
-        btBorrar.setBounds(150,40,100,40);
+        btBorrar.setBounds(320,22,100,40);
+        btBorrar.setActionCommand("borrar");
         this.add(btBorrar);
-        btBorrar.setActionCommand("Borrar");
-
-        // crear y agregar boton salir
+        
         btSalir = new JButton("Salir");
-        btSalir.setBounds(270,40,100,40);
+        btSalir.setBounds(425,22,100,40);
+        btSalir.setActionCommand("salir");
         this.add(btSalir);
-        btSalir.setActionCommand("Salir");
-
-        //Borde y titulo al panel 
+        
+        //Borde y titulo del panel
         TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
-        borde.setTitleColor(Color.black);
-        this.setBorder(borde);
-
+        borde.setTitleColor(Color.BLACK);
+        setBorder(borde);
     }
+
 }

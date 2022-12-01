@@ -1,15 +1,16 @@
-package Ejecutable;
+package ejecutable;
 
-import Modelo.Banco;
+import modelo.Ahorros;
 import vista.VentanaPrincipal;
-import Controlador.controlador;
 
-public class Test
+public class Test 
 {
     public static void main(String[] args) 
     {
-        VentanaPrincipal miVentana = new VentanaPrincipal();
-        Banco miBiblioteca = new Banco();
-        controlador miControlador = new controlador(miVentana, miBiblioteca);    
+
+        VentanaPrincipal miVentanaPrincipal = new VentanaPrincipal();
+        Ahorros n = new Ahorros(20000000,0);
+
+        System.out.println(n.calcularIntereses());
     }
 }
