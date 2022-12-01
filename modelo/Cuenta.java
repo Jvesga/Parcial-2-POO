@@ -1,25 +1,42 @@
-package modelo;
+package Modelo;
 
-public class Cuenta {
-    
+public class Cuenta
+{
     private int numeroCuenta;
     private double saldo;
-    
-    public Cuenta(int cuenta, double inicial) {
+    private String tipoCuenta;
+
+    public Cuenta(int cuenta, double inicial, String tipo)
+    {
         numeroCuenta = cuenta;
         saldo = inicial;
-    } 
+        tipo = tipoCuenta;
+    }
 
-    public void depositar(double cantidad) {
-        saldo = saldo + cantidad;
-    } 
+    public Cuenta()
+    {
+        this.numeroCuenta = 0;
+        this.saldo = 0;
+        this.tipoCuenta = "";
+    }
 
-    public void retirar(double cantidad) {
-        saldo = saldo - cantidad;
-    } 
+    public Integer getNumCuenta()
+    {
+        return numeroCuenta;
+    }
 
-    public double saldo() {
+    public Double getSaldo()
+    {
         return saldo;
-    }     
-    
+    }
+
+    public String getTipoCuenta()
+    {
+        return tipoCuenta;
+    }
+
+    public String toString()
+    {
+        return("-Numero de cuena: " + numeroCuenta + "\n-Saldo Inicial: " + saldo);
+    }
 }

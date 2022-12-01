@@ -1,16 +1,43 @@
-package modelo;
+package Modelo;
 
-public abstract class Banco
+import vista.PanelResultados;
+import java.util.ArrayList;
+
+public class Banco
 {
+    private ArrayList<Cuenta> cuentasBanco;
 
-    public abstract void depositar();
-
-    public abstract double retirar();
-
-    public abstract double calcularIntereses();
-
-    public String toString()
+    public Banco(ArrayList<Cuenta> cuentasBanco)
     {
-        return("Los intereses son " + calcularIntereses());
+        this.cuentasBanco = cuentasBanco;
     }
+
+    public Banco()
+    {
+        this.cuentasBanco =  new ArrayList<>();
+    }
+
+    public ArrayList<Cuenta> getCuentasBanco() 
+    {
+        return cuentasBanco;
+    }
+
+    public void setCuentasBanco(ArrayList<Cuenta> cuentasBanco) 
+    {
+        this.cuentasBanco = cuentasBanco;
+    }
+
+    public void addCuenta (Cuenta cuenta)
+    {
+        cuentasBanco.add(cuenta);
+    }
+
+    public void imprimirCuentas()
+    {
+        for(int i = 0; i < cuentasBanco.size(); i++)
+        {
+            PanelResultados.mostrarResultados(cuentasBanco.get(i).toString());
+        }
+    }
+
 }

@@ -1,6 +1,5 @@
 package vista;
 
-import javax.swing.JPanel;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -10,52 +9,40 @@ import javax.swing.border.TitledBorder;
 
 public class PanelResultados extends JPanel
 {
-        //---------------------------
-    // Atributos 
-    //---------------------------
-    public static JTextArea taResultado;
+    private JTextArea taResultado;
     private JScrollPane spResultado;
-
-    //---------------------------
-    // Metodos
-    //---------------------------
-
-    //Metodo constructor
+   
     public PanelResultados()
     {
-        //Definir contenedor del panel
+        
         this.setLayout(null);
-        this.setBackground(Color.gray);
+        this.setBackground(Color.WHITE);
 
-        //Creacion y edicion del area de texto
+       
         taResultado = new JTextArea();
         spResultado = new JScrollPane(taResultado);
-        spResultado.setBounds(9,15,512,130);
+        spResultado.setBounds(10,20,360,150);
         this.add(spResultado);
 
-        //Borde y titulo
-        TitledBorder borde = BorderFactory.createTitledBorder("Datos Resultados");
-        borde.setTitleColor(Color.BLACK);
+       
+        TitledBorder borde = BorderFactory.createTitledBorder("Operaciones");
+        borde.setTitleColor(Color.BLUE);
         this.setBorder(borde);
-        
     }
-    //Borrar
-    public void borrar()
-    {
-        taResultado.setText("");
-    }
+
     
-    //Mostrar resultado
-    public static void mostrarResultado(String texto)
+    public void mostrarResultado(String msj)
     {
-        taResultado.append(texto);
+       
+        taResultado.append(msj);
     }
 
     public void borrarTa()
     {
         taResultado.setText("");
     }
+
+
     public static void mostrarResultados(String string) {
     }
-
 }
